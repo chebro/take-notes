@@ -91,26 +91,3 @@ function modifyModal(item, magicVal) {
     document.getElementById("textAreaModal").innerHTML = magic;
     document.getElementById("titleAreaModal").innerHTML = moreMagic;
 }
-
-/*
-function modifyModal(editItem) {
-    var data = {
-        truth: 1,
-        item: editItem
-    }
-    fetch('/home', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data.noteInModal._id)
-            document.getElementById("textAreaModal").innerHTML = data.noteInModal.text
-            document.getElementById("titleAreaModal").innerHTML = data.noteInModal.title
-            document.getElementById("_id").innerHTML = data.noteInModal._id
-        })
-}
-*/

@@ -15,7 +15,6 @@ router
 router
     .route('/')
     .get(noCache, notesController.getRoot);
-// .post(notesController.postRoot);
 
 router
     .route('/login')
@@ -32,6 +31,3 @@ router
     .get(noCache, userController.logoutUser);
 
 module.exports = router;
-
-
-

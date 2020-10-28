@@ -40,27 +40,3 @@ function typeWriter() {
         setTimeout(typeWriter, 200);
     }
 }
-
-     // .then((res) => {
-    //     // console.log(res);
-    //     return res.json();
-    // })
-    // .then((data) => {
-    //     // if (data.logged !== 1) {
-    //     //     document.getElementById('message').innerHTML = data;
-    //     // }
-    //     // else {
-    //     //     console.log(data.token);
-    //     //     fetch('/home', {
-    //     //         method: 'GET',
-    //     //         headers: {
-    //     //             'Content-Type': 'application/json',
-    //     //             'login-token': data.token
-    //     //         },
-    //     //         // body: JSON.stringify(data)
-    //     //     });
-    //     //     // .then(() => {
-    //     //     //     window.location = '/home';
-    //     //     // });
-    //     // }
-    // });

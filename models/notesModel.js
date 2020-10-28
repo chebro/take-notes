@@ -15,14 +15,12 @@ const userSchema = new mongoose.Schema({
 exports.Notes = mongoose.model('Notes', noteSchema);
 exports.User = mongoose.model('Users', userSchema);
 
-// Registration Validation
 exports.regValSchema = Joi.object({
     name: Joi.string().min(6).required(),
     email: Joi.string().min(6).required().email(),
     password: Joi.string().min(6).required()
 });
 
-// Login Validation
 exports.logValSchema = Joi.object({
     email: Joi.string().min(6).required().email(),
     password: Joi.string().min(6).required()

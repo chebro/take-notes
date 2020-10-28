@@ -11,17 +11,13 @@ exports.getLogin = (req, res) => {
 };
 
 exports.saveUser = async (req, res) => {
-    // 'POST /register'
-    //Validate Registraton Credentials
     const { error } = notesModel.regValSchema.validate(req.body);
     if (error) {
-        // console.log(error);
         return res.status(400).send(JSON.stringify(error.details[0].message));
     }
     //Check if Email Exists
     const emailExists = await notesModel.User.findOne({ email: req.body.email });
     if (emailExists) {
-        // console.log('Email Already Exists.');
         return res.status(400).send(JSON.stringify('Email Already Exists.'));
     }
     //Hash Password
@@ -35,7 +31,6 @@ exports.saveUser = async (req, res) => {
     });
     try {
         const savedUser = await user.save();
-        // console.log({ user: user._id });
         return res.send({ user: user._id, registered: 1 });
     }
     catch (err) {
@@ -44,11 +39,9 @@ exports.saveUser = async (req, res) => {
 };
 
 exports.loginUser = async (req, res) => {
-    // 'POST /login'
     //Validate Login Credentials
     const { error } = notesModel.logValSchema.validate(req.body);
     if (error) {
-        // console.log(error);
         return res
             .status(400)
             .send(JSON.stringify(error.details[0].message));
@@ -56,7 +49,6 @@ exports.loginUser = async (req, res) => {
     //Check if User Exists
     const user = await notesModel.User.findOne({ email: req.body.email });
     if (!user) {
-        // console.log('Invalid Email or Password');
         return res
             .status(400)
             .send(JSON.stringify('Invalid Email or Password'));
@@ -64,19 +56,15 @@ exports.loginUser = async (req, res) => {
     //Check Password
     const isValidPassword = await bcrypt.compare(req.body.password, user.password);
     if (!isValidPassword) {
-        // console.log('Invalid Email or Password');
         return res
             .status(400)
             .send(JSON.stringify('Invalid Email or Password'));
     }
     const token = jwt.sign({ _id: user._id }, 'mystupidsecret');
-    // res.clearCookie('loginToken');
     res.cookie('loginToken', token, {
         expires: new Date(Date.now() + 10 * 60 * 1000)
     });
     res.send({ logged: true });
-    // .header('login-token', token)
-    // .send({ token: token, logged: 1 });
 };
 
 exports.logoutUser = (req, res) => {
