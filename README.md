@@ -33,11 +33,11 @@ Install [MongoDB](https://docs.mongodb.com/manual/administration/install-communi
 In case you're running locally, the URI will generally be `localhost:27017`.
 
 ## Setup Local Environment
-Create a `.env` file at the root directory in the following format, replace `''` with their respective values, where `MONGO_URI` is the URI to your local/cloud database, and `PORT` is where the express server will run.
+Create a `.env` file at the root directory in the following format, replace the fields with their respective values, where `MONGO_URI` is the URI to your local/cloud database, and `PORT` is where the express server will run.
 > .env
 ```
-MONGO_URI=''
-PORT='' 
+MONGO_URI='<YOUR_MONGO_URI>'
+PORT=<YOUR_SERVER_PORT> 
 ```
 
 ## Start the Server
