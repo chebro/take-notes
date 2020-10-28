@@ -5,6 +5,14 @@ A simple note taking web application with a basic authentication system. Uses `e
 
 Checkout the [demo hosted on Azure](https://takenotes.azurewebsites.net).
 
+#### Index
+-    [Architechture and Implementation](#architechture-and-implementation)
+-    [Run Locally](#run-locally)
+     -    [Setup a MongoDB Database](#setup-a-mongodb-database)
+     -    [Setup Up Local Environment](#setup-local-environment)
+     -    [Start the Server](#start-the-server)
+-    [Contributing](#contributing)
+
 # Architechture and Implementation
 In a nutshell, the code is based on the MVC architechture, with the following quirks:
 
@@ -26,9 +34,8 @@ In case you're running locally, the URI will generally be `localhost:27017`.
 
 ## Setup Local Environment
 Create a `.env` file at the root directory in the following format, replace `''` with their respective values, where `MONGO_URI` is the URI to your local/cloud database, and `PORT` is where the express server will run.
-
+> .env
 ```
-#.env
 MONGO_URI=''
 PORT='' 
 ```
@@ -42,4 +49,6 @@ npm start
 ```
 
 # Contributing
-In case you come across this repo as a beginner/you simply want to contribute, feel free to leave an issue/pull request, the author will be happy to see your ideas.
+In case you come across this repo as a beginner or you simply want to contribute, feel free to leave an issue/pull request. 
+
+The author will be pleased to see look at your ideas.
