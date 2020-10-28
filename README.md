@@ -5,6 +5,8 @@ A simple note taking web application with a basic authentication system. Uses `e
 
 Checkout the [demo hosted on Azure](https://takenotes.azurewebsites.net).
 
+<img src="https://i.imgur.com/LiM9x8P.png" width="500">
+
 #### Index
 -    [Architechture and Implementation](#architechture-and-implementation)
 -    [Run Locally](#run-locally)
@@ -34,7 +36,7 @@ In case you're running locally, the URI will generally be `localhost:27017`.
 
 ## Setup Local Environment
 Create a `.env` file at the root directory in the following format, replace the fields with their respective values, where `MONGO_URI` is the URI to your local/cloud database, and `PORT` is where the express server will run.
-> .env
+
 ```
 MONGO_URI='<YOUR_MONGO_URI>'
 PORT=<YOUR_SERVER_PORT> 
