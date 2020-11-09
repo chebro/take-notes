@@ -1,9 +1,6 @@
 const jwt = require('jsonwebtoken');
 const notesModel = require('./../models/notesModel');
 
-var isLogged = false;
-var tokenInfo = {};
-
 exports.getRoot = (req, res) => {
     res.redirect('/home');
 };
