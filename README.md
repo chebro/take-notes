@@ -3,7 +3,7 @@
 
 A simple note taking web application with a basic authentication system. Uses `express` for backend routing pipeline/middleware and `ejs` templates to serve psuedo-static html pages from the `/views` directory. 
 
-Checkout the [demo hosted on Azure](https://takenotes.azurewebsites.net).
+Checkout the [demo hosted on Azure](https://takenotes.chebro.dev).
 
 <img src="https://i.imgur.com/LiM9x8P.png" width="500">
 
